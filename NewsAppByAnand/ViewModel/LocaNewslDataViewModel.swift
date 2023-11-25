@@ -8,7 +8,9 @@
 import Foundation
 
 class NoInterNetDataVM{
+    
     var news_list: [Article] = []
+    
     func offline_news_list(completion:@escaping () -> Void){
         if let jsonString = UserDefaults.standard.string(forKey: "JSONLocalStore"),
            let jsonData = jsonString.data(using: .utf8) {
